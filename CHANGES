@@ -1,5 +1,13 @@
-Pint Changelog
-==============
+unhinged-units Changelog
+========================
+
+unhinged-units is a fork of Pint. Entries below are inherited from upstream
+Pint history; new unhinged-units releases will be appended above.
+
+----
+
+Pint Changelog (upstream history)
+=================================
 
 0.26.0 (unreleased)
 -------------------

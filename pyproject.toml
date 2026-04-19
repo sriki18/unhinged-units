@@ -43,8 +43,8 @@ include = [
 [project.optional-dependencies]
 test = ["pytest", "pytest-cov", "pytest-subtests", "pytest-benchmark"]
 test-mpl = ["pytest-mpl"]
-test-all = ["pint[test, test-mpl]"]
-codspeed = ["pint[test-all]", "pytest-codspeed"]
+test-all = ["unhinged-units[test, test-mpl]"]
+codspeed = ["unhinged-units[test-all]", "pytest-codspeed"]
 numpy = ["numpy >= 2.0.0"]
 uncertainties = ["uncertainties >= 3.1.6"]
 babel = ["babel <= 2.8"]
@@ -55,7 +55,7 @@ dask = ["dask < 2025.3.0"]
 scipy = ["scipy"]
 matplotlib = ["matplotlib"]
 all = [
-  "pint[numpy,uncertainties,babel,pandas,pandas,xarray,dask,scipy,matplotlib]",
+  "unhinged-units[numpy,uncertainties,babel,pandas,pandas,xarray,dask,scipy,matplotlib]",
 ]
 docs = [
   "sphinx>=6,<8.2",
@@ -86,7 +86,7 @@ docs = [
 
 [project.urls]
 Homepage = "https://github.com/sriki18/unhinged-units"
-Documentation = "https://pint.readthedocs.io/"
+Documentation = "https://github.com/sriki18/unhinged-units#readme"
 Upstream = "https://github.com/hgrecco/pint"
 
 [project.scripts]
@@ -124,7 +124,7 @@ platforms = ['osx-arm64', 'linux-64', 'win-64']
 [tool.pixi.tasks]
 
 [tool.pixi.pypi-dependencies]
-pint = { path = ".", editable = true }
+unhinged-units = { path = ".", editable = true }
 
 [tool.pixi.environments]
 dev = { features = ["numpy", "dev", "py313"], solve-group = "default" }
@@ -204,7 +204,7 @@ pip = "*"
 typecheck = "pyright"
 
 [tool.pixi.feature.docs.pypi-dependencies]
-pint = { path = ".", editable = true }
+unhinged-units = { path = ".", editable = true }
 
 [tool.pixi.feature.docs.tasks]
 docbuild = "sphinx-build -n -j auto -b html -d build/doctrees docs build/html"
