@@ -42,3 +42,4 @@ dask-worker-space
 
 # airspeed velocity bechmark
 benchmarks/hashes.txt
+# SPEC.md

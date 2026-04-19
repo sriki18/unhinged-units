@@ -1,13 +1,12 @@
 [project]
-name = "Pint"
-authors = [{ name = "Hernan E. Grecco", email = "hernan.grecco@gmail.com" }]
+name = "unhinged-units"
+authors = [{ name = "Srikiran Chandrasekaran", email = "srikiranc@gmail.com" }]
 dynamic = ["version"]
 license = { text = "BSD" }
-description = "Physical quantities module"
+description = "Serious unit conversion for deeply unserious people. A fork of Pint with bananas."
 readme = "README.rst"
 maintainers = [
-  { name = "Hernan E. Grecco", email = "hernan.grecco@gmail.com" },
-  { name = "Jules Chéron", email = "julescheron@gmail.com" },
+  { name = "Srikiran Chandrasekaran", email = "srikiranc@gmail.com" }
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -25,7 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 requires-python = ">=3.11"
-keywords = ["physical", "quantities", "unit", "conversion", "science"]
+keywords = ["physical", "quantities", "unit", "conversion", "science", "fun", "banana"]
 dependencies = [
   "platformdirs>=2.1.0",
   "typing_extensions>=4.0.0",
@@ -34,8 +33,12 @@ dependencies = [
 ]
 
 [tool.hatch.build]
-packages = ["pint"]
-include = ["pint/default_en.txt", "pint/constants_en.txt"]
+packages = ["pint", "unhinged_units"]
+include = [
+  "pint/default_en.txt",
+  "pint/constants_en.txt",
+  "pint/unhinged_en.txt",
+]
 
 [project.optional-dependencies]
 test = ["pytest", "pytest-cov", "pytest-subtests", "pytest-benchmark"]
@@ -82,8 +85,9 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/hgrecco/pint"
+Homepage = "https://github.com/sriki18/unhinged-units"
 Documentation = "https://pint.readthedocs.io/"
+Upstream = "https://github.com/hgrecco/pint"
 
 [project.scripts]
 pint-convert = "pint.pint_convert:main"

@@ -922,3 +922,9 @@ neper = 1 ; logbase: 2.71828182845904523536028747135266249775724709369995; logfa
     yard
     pound
 @end
+
+
+#### UNHINGED UNITS ####
+# Everything below this line is specific to unhinged-units and lives in a separate file.
+# During upstream syncs from Pint, re-add this import if it gets lost.
+@import unhinged_en.txt
